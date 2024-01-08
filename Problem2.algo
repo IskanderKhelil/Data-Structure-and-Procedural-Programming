@@ -1,0 +1,45 @@
+ALGORITHM Dot Product;
+procedure dot_product(v1: ARRAY_OF INTEGER, v2: ARRAY_OF INTEGER):
+i,n,ps: INTEGER;
+
+n = length(v1);
+ps = 0;
+FOR i FROM 0 TO n-1 STEP 1 DO
+
+ps = ps + v1[i] * v2[i]
+END FOR
+Write (PS);
+
+
+FUNCTION dot_product(v1, v2): INTEGER;
+n := length(v1);
+ps := 0;
+FOR i FROM 0 TO n-1 STEP 1 DO
+ps = ps + v1[i] * v2[i]
+END FOR
+return ps;
+
+
+
+VAR
+    V1,V2: ARRAY_OF INTEGER;
+    i,n: INTEGER;
+    ps: INTEGER;
+BEGIN
+n:= V1.length;
+
+FOR i FROM 0 TO n-1 STEP 1 DO
+Read (V1[i]);
+Read (V2[j]);
+END FOR;
+
+dot_product(V1,V2); //calling the procedure;
+ps= dot_product(v1, v2); //calling the function;
+
+
+IF (ps == 0);
+THEN Write ("The vectors", v1, "and", v2, "are orthogonal.");
+ELSE Write ("The vectors", v1, "and", v2, "are not orthogonal.");
+END IF;
+
+END
