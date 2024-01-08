@@ -8,7 +8,7 @@ FOR i FROM 0 TO n-1 STEP 1 DO
 
 ps = ps + v1[i] * v2[i]
 END FOR
-Write (PS);
+Write (ps);
 
 
 FUNCTION dot_product(v1, v2): INTEGER;
